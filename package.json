@@ -1,0 +1,45 @@
+{
+  "name": "basees6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/server.js",
+  "engines": {
+    "node": ">=0.10.3 <0.12"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "server:debug": "NODE_ENV=development babel-node --inspect-brk bin/main.js --exec babel-node",
+    "server:dev": "NODE_ENV=development nodemon bin/main.js --exec babel-node",
+    "server:prod": "export PORT=8080 && node build/server.js",
+    "lint": "./node_modules/.bin/eslint --ext .js ./ --fix",
+    "precommit": "npm run lint",
+    "start": "npm run server:dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-prettier-standard": "^2.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.11",
+    "prettier": "^1.17.0",
+    "prettier-eslint": "^8.8.2"
+  }
+}

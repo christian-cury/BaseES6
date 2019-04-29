@@ -1,0 +1,14 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": ["prettier-standard/lib/base", "eslint:recommended", "plugin:node/recommended", "prettier"],
+  "plugins": ["import", "node"],
+  "rules": {
+    "prettier/prettier": "error",
+    "node/no-unsupported-features/es-syntax": "off",
+    "node/no-unpublished-require": 0,
+    "no-console": "error",
+    "no-new": "off"
+  }
+}

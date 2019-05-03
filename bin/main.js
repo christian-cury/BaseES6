@@ -1,12 +1,10 @@
-import express from 'express'
-import logger from '../utils/Logger'
+import { logger, Env, app } from 'realm-sdk'
 import pack from '../package.json'
 import App from '../src/App'
 
-const app = express()
-
-const port = process.env.PORT || 4000
-app.listen(port, async () => {
-  logger.info(`Starting ${pack.name} on port ${port}`)
-  App.start(app)
+Env.init().then(() => {
+  app.listen(Env.PORT, async () => {
+    logger.info(`Starting ${pack.name} on port ${Env.PORT}`)
+    App.start(app)
+  })
 })

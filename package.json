@@ -15,12 +15,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
     "path": "^0.12.7",
+    "realm-sdk": "^1.0.4",
     "split": "^1.0.1",
     "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1",
-    "winston": "^3.2.1"
+    "webpack-cli": "^3.3.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

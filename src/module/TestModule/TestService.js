@@ -9,7 +9,7 @@ class TestService {
     this.helper
       .test(req.query.data)
       .then(data => res.json(data))
-      .catch(error => res.status(400).send(error))
+      .catch(error => res.status(400).json(error))
   }
 }
 

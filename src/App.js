@@ -1,5 +1,5 @@
 import ModuleRoutes from './module/ModuleRoutes'
-import logger from '../utils/Logger'
+import { logger } from 'realm-sdk'
 
 class App {
   static async start(app) {
